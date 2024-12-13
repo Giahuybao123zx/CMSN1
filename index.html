@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Thiệp 20/11</title>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
       @import url("https://fonts.googleapis.com/css?family=Amatic+SC");
-
       body {
         font-family: "Indie Flower", cursive !important;
         background: #aecb8e; /*CAPE HONEY*/
@@ -29,7 +28,7 @@
         color: #1bbc9b;
       } /*MOUNTAIN MEADOW*/
       .color2 {
-        color: #c0392b; /*TALL POPPY*/
+        color: #c0392b;
       }
 
       .card {
@@ -141,29 +140,59 @@
     </style>
   </head>
   <body>
-    <h1 style="text-align: center; font-size: xx-large">Xin chào</h1>
+    <h2 id="chữ" style="text-align: center">Háp Pi Bớt Đây</h2>
+    <audio id="myAudio" controls>
+      <source src="./ảnh/original sound - ritaaustralia_musicaldown.com_1734100953.mp3.crdownload" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+    </audio>
     <div class="card">
       <div class="imgBox">
         <div class="bark"></div>
         <img
           id="gg"
-          src="https://o.vdoc.vn/data/image/2022/11/04/thiep-chuc-mung-ngay-20-11-2.jpg"
+          src="./ảnh/9a51c76ff737a5e38fba76147b465314.webp"
+          style="height: 500px"
         />
       </div>
       <div class="details">
-        <div id="tex-container"></div>
+        <div id="tex-container">
+          <audio
+            id="au1"
+            ;
+            src="C:/Users/PC/OneDrive/Videos/Captures/(1) [Vietsub+ Lyrics] The Nights- Acvicii _ Cover by Angie N. __ Lofi Chill - YouTube - Google Chrome 2024-10-31 09-43-48.mp4"
+            ;
+            type="au1/mp4"
+            ;
+            style="width: 50; height: 60; display: none"
+          ></audio>
+        </div>
       </div>
     </div>
     <script>
+      alert("Happy BirthDay Nam (nhấn ok để tiếp tục)");
+      const audio = document.getElementById("myAudio");
+      audio.play().catch((error) => {
+        console.error("Không thể phát âm thanh: ", error);
+      });
+
       function hienthichu(text, speed, callback) {
         let index = 0;
+        let accumulatedText = ""; // Lưu trữ đoạn văn bản đã hiển thị
+
         function gg() {
           if (index < text.length) {
+            accumulatedText += text.charAt(index);
+
             if (text.charAt(index) === "\n") {
               document.getElementById("tex-container").innerHTML += "<br>";
             } else {
               document.getElementById("tex-container").innerHTML +=
                 text.charAt(index);
+            }
+
+            if (accumulatedText.includes("Yêu cô")) {
+              document.getElementById("au1").style.display = "inline-block";
             }
             index++;
             setTimeout(gg, speed);
@@ -175,11 +204,13 @@
       }
       let x = [
         " ",
-        "Chúc mừng ngày Nhà Giáo Việt Nam 20/11! Em xin chúc cô luôn vui khỏe, tươi trẻ và hạnh phúc. Nhờ sự dẫn dắt của cô mà chúng em đã trưởng thành và học hỏi thêm nhiều điều ý nghĩa. Cô mãi là người cô chủ nhiệm tuyệt vời nhất trong lòng chúng em!  ",
-        "Chúc cô mãi luôn xinh đẹp và trở thành bông hoa của đời \n",
-        "Yêu cô \n",
+        "Háp pi bớt đầy to ziu\n",
+        "Nâu bo dy like you\n",
+        "Ziu lúc lai giờ măng kì\n",
+        "Gâu bách to giờ zu\n",
+        "Herzlichen Alles Gute zum deinen Geburstag",
       ];
-      let y = [3000, 100, 100, 100];
+      let y = [200, 100, 100, 100, 100, 100];
       function displatext(index) {
         if (index < x.length) {
           hienthichu(x[index], y[index], () => {
@@ -187,6 +218,7 @@
           });
         }
       }
+
       displatext(0);
     </script>
   </body>
